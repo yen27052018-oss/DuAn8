@@ -1,0 +1,25 @@
+{
+  "name": "duan8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss:assets/css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yen27052018-oss/DuAn8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yen27052018-oss/DuAn8/issues"
+  },
+  "homepage": "https://github.com/yen27052018-oss/DuAn8#readme",
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}
