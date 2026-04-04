@@ -6,18 +6,20 @@
 }
 
 .header{
-    background: var(--header-bg);
+    background: var(--header-bg-color);
 }
 
 .top-bar{
     @extend %flexItemsCenter;
+    position: relative;
     padding:30px 0;
 
     @include abstracts.breakpoint(lg){
         padding:20px 0;
     }
     
-    @include abstracts.breakpoint(sm){
+    @include abstracts.breakpoint(md){
+        justify-content: space-between;
         padding:16px 0;
     }
 
@@ -42,13 +44,28 @@
     }
 
     &__list{
-    @extend %flexItemsCenter;
-    column-gap: 30px;
+        @extend %flexItemsCenter;
+    }
+
+    &__item{
+        &:first-child a{
+            padding-left: 0;
+        }
+
+        &:last-child a{
+            padding-right: 0;
+        }
+
+        &:hover .dropdown{
+            display: block;
+        }
     }
 
     &__link{
+        height:50px;
         @extend %flexItemsCenter;
         column-gap: 6px;
+        padding:0 15px;
 
         font-size: 1.5rem;
         font-weight: 500;
@@ -61,6 +78,10 @@
     column-gap: 20px;
     margin-left: auto;
 
+    @include abstracts.breakpoint(md){
+        margin-left: 0;
+    }
+
     &__group{
         @extend %flexItemsCenter;
 
@@ -68,7 +89,7 @@
         height:50px;
 
         border-radius: 8px;
-        background:  var(--top-act-group-bg);
+        background:  var(--top-act-group-bg-color);
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
 
         @include abstracts.breakpoint(md){
