@@ -22,14 +22,6 @@
         justify-content: space-between;
         padding:16px 0;
     }
-
-    &__more{
-        display: none;
-
-        @include abstracts.breakpoint(lg){
-        display: block;
-        }
-    }
 }
 
 .navbar{
@@ -64,7 +56,7 @@
 
         @include abstracts.breakpoint(lg){
             display: block;
-            padding:10px  20px;
+            padding:10px  40px;
         }
     }
 
@@ -87,6 +79,8 @@
         @include abstracts.breakpoint(lg){
             flex-direction: column;
             align-items: flex-start;
+            overflow-y:auto;
+            height:calc(100% - 26px);
         }
     }
 
@@ -98,9 +92,6 @@
 
         @include abstracts.breakpoint(lg){
             width: 100%;
-            &:hover .dropdown{
-                display: none;
-            }
         }
     }
 
@@ -115,7 +106,7 @@
         line-height: 1.46; /* 146.667% */
 
         @include abstracts.breakpoint(lg){
-            padding:0 20px;
+            padding: 0 20px 0 40px;
             font-size: 1.6rem;
             line-height: 1.5;
             justify-content: space-between;
@@ -142,15 +133,6 @@
         background:  var(--top-act-group-bg-color);
         box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
 
-        @include abstracts.breakpoint(md){
-            display: none;
-        }
-    }
-
-    &__group--single{
-        @include abstracts.breakpoint(lg){
-        display: none;
-        }
     }
 
     &__group--single &__btn{

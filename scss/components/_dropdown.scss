@@ -1,9 +1,17 @@
+@use "../abstracts";
+
 .dropdown{
     position: absolute;
     left: 0;
     padding-top: 54px;
     width: min(1140px, 100%);
     display: none;
+
+    @include abstracts.breakpoint(lg){
+        position: initial;
+        display: block;
+        padding-top: 0;
+    }
 
     &__inner{
         --inner-padding:30px;
@@ -22,6 +30,13 @@
             translate: -20px 0;
             filter:var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoint(lg){
+            padding: 0 40px;
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+        }
     }
 }
 
@@ -36,6 +51,12 @@
         width: var(--main-column-width);
         max-height:var(--max-inner-height);
         border-right:1px solid var(--top-menu-border-color);
+
+        @include abstracts.breakpoint(lg){
+            width: 100%;
+            height: auto;
+            border-right:none;
+        }
     }
 }
 
@@ -45,6 +66,10 @@
 
     + .menu-column{
         margin-top: var(--inner-padding);
+    }
+
+    @include abstracts.breakpoint(lg){
+        margin-top: 10px;
     }
 
     &__icon{
@@ -80,10 +105,18 @@
         font-weight: 500;
         line-height: 1.5;
         margin:6px 0;
+
+        @include abstracts.breakpoint(lg){
+            margin-bottom: 26px;
+        }
     }
 
     &__list{
         margin-top: 19px;
+
+        @include abstracts.breakpoint(lg){
+            margin-top: 0;
+        }
     }
 
     &__item{
@@ -122,6 +155,11 @@
     grid-template-columns: repeat(3, 1fr);
     overflow-y: auto;
 
+    @include abstracts.breakpoint(lg){
+        padding-left:0;
+        position: initial;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     &--not-main{
         position:initial;
