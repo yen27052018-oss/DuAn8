@@ -16,10 +16,13 @@
     }
 
     &__cate{
-        --grid-gutter-x:51px;
-
         @include abstracts.breakpoint(md){
             --grid-gutter-y:20px;
         }
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
     }
 }

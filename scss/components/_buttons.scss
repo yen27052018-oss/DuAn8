@@ -1,0 +1,27 @@
+// Filter button 
+.filter-btn{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 36px;
+
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: var(--filter-btn-bg);
+    color: var(--filter-btn-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.42; /* 142.857% */
+}
+
+.like-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow:0px 20px 60px var(--like-btn-shadow);
+    background:var(--like-btn-bg);
+
+}

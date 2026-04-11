@@ -32,4 +32,19 @@ html {
   @include abstracts.breakpoint(md){
     --cate-item-bg:#fff;
   }
+
+  //BUTTONS
+  --filter-btn-color:#6C6C72;
+  --filter-btn-bg:#fff;
+  --like-btn-shadow:rgba(124, 124, 124, 0.20);
+  --like-btn-bg:#fff;
+
+  //PRODUCT
+  --product-item-bg:#fff;
+  --product-item-shadow:rgba(237, 237, 246, 0.20);
+  --product-brand-color:#9E9DAB;
+
+  //Filter form
+  --filter-form-bg:#fff;
+  --filter-form-shadow:rgba(200, 200, 200, 0.40);
 }
