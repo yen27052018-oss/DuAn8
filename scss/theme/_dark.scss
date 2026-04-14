@@ -32,10 +32,18 @@ html.dark {
   --filter-btn-bg:#171C28;
   --like-btn-shadow:rgba(124, 124, 124, 0.2);
   --like-btn-bg:#292E39;
+  
 
   //PRODUCT
   --product-item-bg:#171C28;
   --product-item-shadow:rgba(0, 0, 0, 0.20);
   --product-brand-color:#9E9DAB;
+
+  //Filter form
+  --filter-form-bg:var(--dropdown-bg-color);
+  --filter-form-shadow:rgba(0, 0, 0, 0.40);
+  --filter-form-tag-bg:#171C28;
+  --filter-form-arrow:var(--dropdown-arrow-color);
+  --filter-form-btn-primary:#1a162e;
 
 }
