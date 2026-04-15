@@ -1302,7 +1302,6 @@ html {
   --filter-form-shadow:rgba(200, 200, 200, 0.40);
   --filter-form-tag-bg:#f8f8fb;
   --auth-content-bg:#fff;
-  --auth-desc-color:#9E9DA8;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
