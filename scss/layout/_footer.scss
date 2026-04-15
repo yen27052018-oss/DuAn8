@@ -1,0 +1,162 @@
+@use "../abstracts";
+
+.footer{
+    background: var(--footer-bg-color);
+    margin-top: 50px;
+    padding-top:50px;
+    font-size: 1.5rem;
+
+    &__logo{
+        @include abstracts.breakpoint(lg){
+            margin-left: 0 !important;
+        }
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        column-gap: 40px;
+
+        @include abstracts.breakpoint(lg){
+            grid-template-columns:repeat(2, 1fr);
+            gap:40px 86px;
+        }
+
+        @include abstracts.breakpoint(sm){
+            grid-template-columns:repeat(1, 1fr);
+        }
+    }
+
+    &__desc{
+        width: 276px;
+        margin-top: 25px;
+        font-weight: 400;
+        line-height: 1.46; /* 146.667% */
+    }
+
+    &__title,
+    &__text{
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+    }
+
+    &__title{
+        margin-top: 25px;
+    }
+
+    &__act-wrap{
+
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &__email-input{
+        height: 46px;
+        display: flex;
+        padding-left:10px;
+        padding-right: 10px;
+        border: 1px solid #D2D1D6;
+        border-radius: 10px;
+    }
+
+    &__input{
+        width: 100%;
+        font-weight: 500;
+        line-height: 1.46;
+        background: transparent;
+    }
+
+    &__heading{
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5; /* 150% */
+    }
+
+    &__list{
+        margin-top: 15px;
+    }
+
+    &__link{
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.42;
+        transition: color;
+        padding:8px 0;
+        &:hover{
+            color:#0071DC;
+            font-weight: 500;
+        }
+    }
+
+    &__text{
+        display: block;
+        margin-top:20px;
+    }
+
+    &__desc-info{
+        margin-top: 4px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.46;
+    }
+
+    &__copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0;
+
+        @include abstracts.breakpoint(md){
+            flex-direction: column-reverse;
+        }
+
+
+        &-text{
+            font-size: 1.4rem;
+            line-height: 1.46;
+            color:#9E9DA8;
+
+            @include abstracts.breakpoint(md){
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__socials{
+        display: flex;
+        column-gap: 14px;
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        &-icon{
+            width: 15px;
+        }
+
+        &-link{
+            padding:8px;
+        }
+
+        &:nth-child(1){
+            background: #4267b2;
+        }
+        &:nth-child(2){
+            background: #ff0033;
+        }
+        &:nth-child(3){
+            background: #000;
+        }
+        &:nth-child(4){
+            background: #1DA1F2;
+        }
+        &:nth-child(5){
+            background: #0A66C2;
+        }
+    }
+
+}
