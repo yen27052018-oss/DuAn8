@@ -1,16 +1,42 @@
+@use "../abstracts";
+
 .auth{
     display: flex;
     min-height: 100vh;
 
     &__intro, &__content{
         flex:1;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     &__intro{
+        background: var(--auth-intro-bg);
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        gap: 50px;
+
+        &-logo,
+        &-next{
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &-logo{
+            top:80px;
+        }
+
+        &-next{
+            bottom:50px;
+        }
+
+        &-img{
+            max-width: min(424px, 100%);
+        }
 
         &-text{
             max-width: 412px;
@@ -19,13 +45,30 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.44; /* 144.444% */
+            color:var(--auth-intro-color);
 
+            @include abstracts.breakpoint(md){
+                font-size: 1.5rem;
+            }
         }
     }
 
     &__content{
-        padding:50px 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
         background-color: var(--auth-content-bg);
+
+        @include abstracts.breakpoint(md){
+            &.hide{
+                translate: 100%;
+            }
+
+            position:fixed;
+            inset: 0;
+            z-index: 1;
+            transition: translate 0.3s;
+            overflow-y: auto;
+        }
 
         &-inner{
             display: flex;
@@ -42,21 +85,37 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.46; /* 146.667% */
+
+        @include abstracts.breakpoint(md){
+            font-size: 2.2rem;
+        }
     }
 
     &__desc{
         color:#9E9DA8;
-
+        padding:0 20px;
         margin-top: 10px;
-        max-width: 380px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.46; /* 146.667% */
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.4rem;
+            line-height: 1.42;
+        }
     }
 
     &__form{
         width: 100%;
         margin-top: 60px;
+
+        @include abstracts.breakpoint(md){
+            margin-top: 30px;
+        }
+
+        &-forgot{
+            margin-top: 10px;
+        }
     }
 
     &__link{
@@ -64,6 +123,26 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1.46;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.4rem;
+            line-height: 1.42;
+        }
+
+        &-signin{
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.46;
+
+            @include abstracts.breakpoint(md){
+            font-size: 1.6rem;
+            line-height: 1.42;
+            }
+        }
+
+        @include abstracts.breakpoint(md){
+            
+        }
     }
 
     &__btn-group{
@@ -80,5 +159,18 @@
 
     &__text{
         margin-top: 108px;
+        color:#9E9DA8;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.44; /* 144.444% */
+
+        @include abstracts.breakpoint(md){
+            margin-top: 56px;
+            font-size: 16px;
+        }
+    }
+
+    &__message{
+        margin-top: 10px;
     }
 }

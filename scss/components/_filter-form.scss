@@ -47,15 +47,6 @@
     &__form{
         margin-top: 30px;
 
-        &-label{
-            display: block;
-
-            &--small{
-                font-size: 1.4rem;
-                line-height: 1.42;
-            }
-        }
-
         &-group{
             margin-top: 20px;
 
@@ -93,8 +84,7 @@
             }
         }
 
-        &-text-input,
-        &-select-wrap{
+        &-text-input{
             border-radius: 6px;
             border: 1px solid #D2D1D6;
         }
@@ -145,57 +135,6 @@
                 margin-left: 16px;
             }
         }
-
-        &-select-wrap{
-            display: flex;
-            align-items: center;
-            height: 45px;
-        }
-
-        &-select{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-width:var(--width,108px);
-            padding: 0 14px;
-            height:calc(100% - 10px);
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42;
-
-            @include abstracts.breakpoint(xl){
-                flex: 1;
-            }
-        }
-
-        &-select + &-select{
-            border-left: 1px solid #D2D1D6;
-        }
-
-        &-tags{
-            display: flex;
-            gap:10px 20px;
-            flex-wrap: wrap;
-        }
-
-        &-tag{
-            padding: 6px 12px;
-            border-radius: 6px;
-            background: var(--filter-form-tag-bg);
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 1.42;
-            color:#9E9DA8;
-            transition: color 0.3s;
-
-            &:hover{
-                color:var(--text-color);
-            }
-
-        }
-
     }
 
     &__row{

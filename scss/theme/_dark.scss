@@ -32,6 +32,9 @@ html.dark {
   --filter-btn-bg:#171C28;
   --like-btn-shadow:rgba(124, 124, 124, 0.2);
   --like-btn-bg:#292E39;
+  --filter-btn-icon: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(725%) hue-rotate(285deg) brightness(93%) contrast(89%);
+  --btn-outline-color:#B9BABE;
+
   
 
   //PRODUCT
@@ -42,8 +45,21 @@ html.dark {
   //Filter form
   --filter-form-bg:var(--dropdown-bg-color);
   --filter-form-shadow:rgba(0, 0, 0, 0.40);
-  --filter-form-tag-bg:#171C28;
+  --form__tag-bg:#171C28;
   --filter-form-arrow:var(--dropdown-arrow-color);
   --filter-form-btn-primary:#1a162e;
+
+  //Auth
+  --auth-content-bg:#292E39;
+  --auth-intro-bg:#171C28 !important;
+  --auth-intro-color:#B9BABE;
+
+  //Product page
+  --product-detail-bg:#292E39;
+  --breadcumb-bg-color:#171C28;
+  --breadcumb-shadow-color:rgba(23, 28, 40, 0.20);
+
+  --prod-info-bg:#171C28;
+  --prod-info-tag-color:#292E39;
 
 }

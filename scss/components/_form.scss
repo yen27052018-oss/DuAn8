@@ -1,9 +1,30 @@
+@use "../abstracts";
+
 .form{
     &__group{
         margin-top: 30px;
 
+        @include abstracts.breakpoint(md){
+            margin-top: 20px;
+        }
+
         &--inline{
             display: flex;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)){
+        .form__text-input{
+            border-color: red;
+        }
+
+        .form__error,
+        .form__input-icon-error{
+            display: block;
+        }
+
+        .form__input-icon{
+            display: none;
         }
     }
 
@@ -27,7 +48,13 @@
 
         font-size: 1.8rem;
         font-weight: 500;
-        line-height: 1.44; /* 144.444% */
+        line-height: 1.44;/* 144.444% */
+        background: transparent;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.6rem;
+            line-height: 1.5; /* 150% */
+        }
 
         &::placeholder{
             color:#d2d1d6;
@@ -36,6 +63,20 @@
         &-icon{
             margin-left: 12px;
         }
+    }
+
+    &__error{
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color:red;
+        display: none;
+    }
+
+    &__input-icon-error{
+        display: none;
+        animation: shake 0.5s;
     }
 
     &__pull-right{
@@ -92,6 +133,72 @@
             &::after{
                 display: block;
             }
+        }
+    }
+
+    &-label{
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+
+        &{
+            display: block;
+
+            &--small{
+                font-size: 1.4rem;
+                line-height: 1.42;
+            }
+        }
+    }
+
+    &__select-wrap{
+        border-radius: 6px;
+        border: 1px solid #D2D1D6;
+        display: flex;
+        align-items: center;
+        height: 45px;
+    }
+
+    &__select{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width:var(--width,108px);
+        padding: 0 14px;
+        height:calc(100% - 10px);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42;
+
+        @include abstracts.breakpoint(xl){
+            flex: 1;
+        }
+    }
+
+    &__select + &__select{
+        border-left: 1px solid #D2D1D6;
+    }
+
+    &__tags{
+        display: flex;
+        gap:10px 14px;
+        flex-wrap: wrap;
+    }
+
+    &__tag{
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: var(--form__tag-bg);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42;
+        color:#9E9DA8;
+        transition: color 0.3s;
+
+        &:hover{
+            color:var(--text-color);
         }
     }
 }

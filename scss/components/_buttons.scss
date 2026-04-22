@@ -63,6 +63,7 @@
     &--outline{
         background: transparent;
         border:1px solid #d2d1d6;
+        color:var(--btn-outline-color);
     }
 
     &--rounded{
@@ -75,6 +76,7 @@
 
     &-icon{
         margin-right: 10px;
+        filter:var(--filter-btn-icon);
     }
 }
 

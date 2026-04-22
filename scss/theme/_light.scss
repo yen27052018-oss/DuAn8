@@ -48,8 +48,32 @@ html {
   //Filter form
   --filter-form-bg:#fff;
   --filter-form-shadow:rgba(200, 200, 200, 0.40);
-  --filter-form-tag-bg:#f8f8fb;
+  --form__tag-bg:#f8f8fb;
 
   //Auth
   --auth-content-bg:#fff;
+  --auth-btn-color:#B9BABE;
+
+  //Product page
+  --product-detail-bg:#fff;
+
+  @include abstracts.breakpoint(md){
+    --product-detail-bg:#fafafd;
+  }
+  
+  
+  --product-conatiner-bg:#fff;
+
+  --breadcumb-bg-color:#F6F6F6;
+
+  @include abstracts.breakpoint(md){
+    --breadcumb-bg-color:#fff;
+  }
+  --breadcumb-shadow-color:rgba(237, 237, 246, 0.20);
+  
+  --prod-info-tag-color:#EDEDF6;
+  --prod-info-bg:#F6F6F6;
+  @include abstracts.breakpoint(md){
+    --prod-info-bg:#fff;
+  }
 }

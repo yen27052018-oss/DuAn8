@@ -1,0 +1,213 @@
+@use "../abstracts";
+
+.product-page{
+    display: flex;
+    flex-direction: column;
+    min-height:80vh;
+    background: var(--product-detail-bg);
+    padding-bottom: 50px;
+}
+
+.product-container{
+    margin-top: 30px;
+    @include abstracts.breakpoint(md){
+        background:var(--product-conatiner-bg);
+        border-radius: 20px;
+    }
+}
+
+.prod-preview{
+    padding:0 30px;
+
+    @include abstracts.breakpoint(md){
+        padding: 16px;
+    }
+
+    &__list{
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__item{
+        position: relative;
+        width: 100%;
+        flex-shrink: 0;
+        padding-top: 92%;
+    }
+
+    &__img{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__thumbs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:16px;
+        padding: 30px;
+    }
+
+    &__thumb-img{
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+        border:1.5px solid rgb(158, 157, 168, 0.3);
+        border-radius:8px;
+        cursor: pointer;
+        transition: translate, opacity, border-color;
+        transition-duration: 0.3s;
+
+        @include abstracts.breakpoint(sm){
+            width: 50px;
+            height: 50px;
+        }
+
+        &:hover{
+            translate: 0 -10px;
+            opacity:1;
+            border-color: #9e9da8;
+        }
+
+        &--current{
+            opacity:1;
+            translate: 0 -10px;
+            border-color: #ffb700;
+        }
+    }
+}
+
+.prod-info{
+    padding: 60px;
+    background: var(--prod-info-bg);
+
+    @include abstracts.breakpoint(xl){
+        padding: 20px;
+    }
+
+    @include abstracts.breakpoint(md){
+        border-radius: 20px;
+        padding:0 16px 16px;
+    }
+
+    &__heading{
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 144.444%;
+        }
+    }
+
+    &__label{
+        margin-top: 30px;
+    }
+
+    &__tag{
+        background: var(--prod-info-tag-color);
+    }
+
+    &__card{
+        margin-top: 26px;
+        padding:20px;
+        border-radius: 6px;
+        border: 1px solid #B9BABE;
+    }
+
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__price{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__tax{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+
+        margin-left: 10px;
+        padding:0 8px;
+        color:#67B044;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &__total{
+        display: block;
+        margin: 20px 0;
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 138.462%;
+    }
+
+    &__add-to-cart{
+        flex:1;
+    }
+
+    &__like-btn{
+        background: transparent;
+        margin-left: 18px;
+        border-radius: 6px;
+        border: 1px solid #D2D1D6;
+        height: 46px;
+        width: 46px;
+
+        @include abstracts.breakpoint(xl){
+            margin-left: 10px;
+        }
+    }
+}
+
+.prod-props{
+    padding-left: 30px;
+
+    @include abstracts.breakpoint(xl){
+        padding-left: 10px;
+    }
+}
+
+
+.prod-prop{
+    margin-top: 26px;
+    display: flex;
+    gap:16px;
+
+    @include abstracts.breakpoint(md){
+        margin-top: 20x;
+    }
+
+    &__icon{
+        align-self: flex-start;
+    }
+
+    &__title{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.breakpoint(md){
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+        }
+    }
+
+    &__desc{
+        margin-top: 4px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+}
