@@ -11,6 +11,7 @@
 .product-container{
     margin-top: 30px;
     @include abstracts.breakpoint(md){
+        margin-top: 20px;
         background:var(--product-conatiner-bg);
         border-radius: 20px;
     }
@@ -21,6 +22,9 @@
 
     @include abstracts.breakpoint(md){
         padding: 16px;
+        background: var(--prod-info-review);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     &__list{
@@ -133,7 +137,7 @@
     }
 
     &__tax{
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+        background: rgb(103 176 68 / 20%);
 
         margin-left: 10px;
         padding:0 8px;
@@ -141,6 +145,7 @@
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 142.857%;
+        border-radius: 5px;
     }
 
     &__total{
@@ -209,5 +214,50 @@
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 142.857%;
+    }
+}
+.prod-tab{
+    &__list{
+        display: flex;
+        align-items: center;
+        margin:0 -30px;
+    }
+
+    &__item{
+        padding:0 30px;
+
+        color:#9E9DA8;
+
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+        transition: color 0.3s;
+
+        &:hover{
+            cursor: pointer;
+            color:inherit;
+        }
+
+        &--current{
+            color:inherit;
+        }
+    }
+    &__contents{
+        padding-top: 30px;
+    }
+    &__content{
+        display: none;
+        &--current{
+            display: block;
+        }
+    }
+}
+
+.prod-content{
+    &__heading{
+        margin-bottom: 30px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
     }
 }

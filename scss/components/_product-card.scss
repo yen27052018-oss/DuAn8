@@ -4,6 +4,7 @@
     box-shadow: 0 20px 60px 10px var(--product-item-shadow);
     padding: 16px;
     transition: translate 0.3s;
+    height: 100%;
 
     &:hover{
         translate: 0 -10px;
