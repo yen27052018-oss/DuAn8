@@ -217,6 +217,10 @@
     }
 }
 .prod-tab{
+    @include abstracts.breakpoint(md){
+        background:var(--prod-tab-bg);
+    }
+
     &__list{
         display: flex;
         align-items: center;
@@ -232,9 +236,17 @@
         font-weight: 500;
         line-height: 145.455%;
         transition: color 0.3s;
+        user-select: none;
+
+        &:not(&--current){
+            cursor: pointer;
+        }
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.5rem;
+        }
 
         &:hover{
-            cursor: pointer;
             color:inherit;
         }
 
@@ -259,5 +271,9 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.8rem;
+        }
     }
 }

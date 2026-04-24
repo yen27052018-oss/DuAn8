@@ -1284,6 +1284,7 @@ html.dark {
   html.dark {
     --product-conatiner-bg:#171C28;
     --prod-info-review:#171C28;
+    --prod-tab-bg:#292E39;
   }
 }
 html.dark {
@@ -1335,7 +1336,10 @@ html {
   --form__tag-bg:#f8f8fb;
   --auth-content-bg:#fff;
   --auth-btn-color:#B9BABE;
+  --breadcumb-bg-color:#F6F6F6;
   --product-detail-bg:#fff;
+  --review-card-bg:#fafafd;
+  --prod-info-bg:#f6f6f6;
 }
 @media (max-width: 767.98px) {
   html {
@@ -1344,14 +1348,13 @@ html {
     --breadcumb-bg-color:#fff;
     --prod-info-bg:#fff;
     --prod-info-review:#fff;
+    --prod-tab-bg:#fafafd;
+    --review-card-bg:#fff;
   }
 }
 html {
-  --breadcumb-bg-color:#F6F6F6;
   --breadcumb-shadow-color:rgba(237, 237, 246, 0.20);
   --prod-info-tag-color:#EDEDF6;
-  --prod-info-bg:#F6F6F6;
-  --review-card-bg:#fafafd;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -2587,6 +2590,11 @@ html {
   border-radius: 16px;
   background: var(--review-card-bg);
 }
+@media (max-width: 991.98px) {
+  .review-card {
+    padding: 20px;
+  }
+}
 .review-card__content {
   display: flex;
   align-items: center;
@@ -2598,6 +2606,12 @@ html {
   border-radius: 50%;
   object-fit: cover;
 }
+@media (max-width: 767.98px) {
+  .review-card__avt {
+    height: 60px;
+    width: 60px;
+  }
+}
 .review-card__info {
   display: flex;
   flex-direction: column;
@@ -2607,6 +2621,11 @@ html {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
+}
+@media (max-width: 767.98px) {
+  .review-card__title {
+    font-size: 1.8rem;
+  }
 }
 .review-card__desc {
   font-size: 1.6rem;
@@ -3017,6 +3036,11 @@ html {
   line-height: 142.857%;
 }
 
+@media (max-width: 767.98px) {
+  .prod-tab {
+    background: var(--prod-tab-bg);
+  }
+}
 .prod-tab__list {
   display: flex;
   align-items: center;
@@ -3029,9 +3053,17 @@ html {
   font-weight: 500;
   line-height: 145.455%;
   transition: color 0.3s;
+  user-select: none;
+}
+.prod-tab__item:not(.prod-tab__item--current) {
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .prod-tab__item {
+    font-size: 1.5rem;
+  }
 }
 .prod-tab__item:hover {
-  cursor: pointer;
   color: inherit;
 }
 .prod-tab__item--current {
@@ -3052,6 +3084,11 @@ html {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 141.667%;
+}
+@media (max-width: 767.98px) {
+  .prod-content__heading {
+    font-size: 1.8rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

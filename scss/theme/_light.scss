@@ -56,21 +56,20 @@ html {
   --auth-btn-color:#B9BABE;
 
   //Product page
+  --breadcumb-bg-color:#F6F6F6;
   --product-detail-bg:#fff;
+  --review-card-bg:#fafafd;
+  --prod-info-bg:#f6f6f6;
   @include abstracts.breakpoint(md){
     --product-conatiner-bg:#fff;
     --product-detail-bg:#fafafd;
     --breadcumb-bg-color:#fff;
     --prod-info-bg:#fff;
     --prod-info-review:#fff;
+    --prod-tab-bg:#fafafd;
+    --review-card-bg:#fff;
   }
-
-  --breadcumb-bg-color:#F6F6F6;
   --breadcumb-shadow-color:rgba(237, 237, 246, 0.20);
 
   --prod-info-tag-color:#EDEDF6;
-  --prod-info-bg:#F6F6F6;
-
-  // Review card
-  --review-card-bg:#fafafd;
 }

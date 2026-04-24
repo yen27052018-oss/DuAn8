@@ -65,6 +65,7 @@ html.dark {
   @include abstracts.breakpoint(md){
     --product-conatiner-bg:#171C28;
     --prod-info-review:#171C28;
+    --prod-tab-bg:#292E39;
   }
 
   // Review card
