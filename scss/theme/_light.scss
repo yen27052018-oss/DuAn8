@@ -17,6 +17,11 @@ html {
     --header-bg-color: #fff;  
   }
 
+  // HEADER
+  --header-act-dropdown-bg:#fff;
+  --header-act-dropdown-shadow:rgba(200, 200, 200, 0.40);
+  --header-act-dropdown-separate:#D2D1D6;
+
   // DROPDOWN
   --dropdown-bg-color:#fff;
   --dropdown-shadow-color:rgba(200, 200, 200, 0.40);
@@ -72,4 +77,14 @@ html {
   --breadcumb-shadow-color:rgba(237, 237, 246, 0.20);
 
   --prod-info-tag-color:#EDEDF6;
+
+  // Checkout
+  --checkout-breadcumb-bg:#fff;
+  --cart-info-bg:#fff;
+  --cart-info-shadow:rgba(237, 237, 246, 0.20);
+  --cart-item-border:#d2d1d6;
+
+  //Dialog
+  --dialog-bg:#fff;
+  --dialog-shadow:rgba(237, 237, 246, 0.2);
 }

@@ -12,6 +12,11 @@ html.dark {
   --top-act-group-separate: #ededf6;
   --search-bag-color:#171C28;
 
+  // HEADER
+  --header-act-dropdown-bg:#292E39;
+  --header-act-dropdown-shadow:rgba(23, 28, 40, 0.40);
+  --header-act-dropdown-separate:#D2D1D6;
+
   // DROPDOWN
   --dropdown-bg-color:#2f3441;
   --dropdown-shadow-color:rgba(23, 28, 40, 0.40);
@@ -70,5 +75,15 @@ html.dark {
 
   // Review card
   --review-card-bg:#171C28;
+
+  // Checkout
+  --checkout-breadcumb-bg:#171C28;
+  --cart-info-bg:#171C28;
+  --cart-info-shadow:rgba(23, 28, 40, 0.20);
+  --cart-item-border:#292E39;
+
+  //Dialog
+  --dialog-bg:#2f3441;
+  --dialog-shadow:rgba(23, 28, 40, 0.40);
 
 }
