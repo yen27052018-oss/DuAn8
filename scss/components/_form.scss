@@ -22,6 +22,8 @@
         gap:30px;
     }
 
+
+
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)){
         .form__text-input{
             border-color: red;
@@ -36,6 +38,7 @@
             display: none;
         }
     }
+
 
     &__text-input,
     &__text-area{
@@ -162,6 +165,18 @@
         font-weight: 500;
         line-height: 1.45;
         display: block;
+
+        &--medium{
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+
+            @include abstracts.breakpoint(md){
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+            }
+        }
 
          &--small{
             margin-bottom: 10px;

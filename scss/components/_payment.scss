@@ -1,0 +1,98 @@
+@use "../abstracts";
+.payment-item{
+    margin-top: 30px;
+    padding:20px;
+    border-radius: 20px;
+    background: var(--payment-item-bg);
+
+    display: flex;
+    align-items: center;
+
+
+    @include abstracts.breakpoint(sm){
+        align-items: flex-start;
+    }
+
+    &__pointer{
+        cursor: pointer;
+    }
+
+    &__info{
+        flex-grow: 1;
+    }
+
+    &__title{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.6rem;
+        }
+    }
+
+    &__desc{
+        @include abstracts.breakpoint(md){
+            font-size: 1.4rem;
+        }
+    }
+
+    &__desc,
+    &__link{
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__content{
+        flex:1;
+        display: flex;
+        align-items: center;
+
+        @include abstracts.breakpoint(sm){
+            flex-direction: column;
+            align-items: flex-start;
+            gap:16px;
+        }
+    }
+
+    &__link{
+        color:#0071dc;
+        transition: text-decoration 0.3s;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__thumb{
+        width: 70px;
+        height: 54px;
+        object-fit: contain;
+        margin-right: 20px;
+
+        @include abstracts.breakpoint(md){
+            width: 60px;
+            height: 46px;
+        }
+    }
+
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap:14px;
+
+        &-input:checked + .payment-item__cost{
+            color:inherit;
+        }
+    }
+
+    &__cost{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color:#9E9DA8;
+    }
+}

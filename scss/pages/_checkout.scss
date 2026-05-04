@@ -28,6 +28,11 @@
     @include abstracts.breakpoint(md){
         padding:16px;
     }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
     
     &__heading{
         font-size: 2.4rem;
@@ -40,6 +45,33 @@
         @include abstracts.breakpoint(md){
             font-size: 1.6rem;
         }
+
+        &--lv2{
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+
+            @include abstracts.breakpoint(md){
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+    &__sub-heading{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        @include abstracts.breakpoint(md){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__desc{
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
     }
 
     &__title{
@@ -63,7 +95,7 @@
     &__row{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         @include abstracts.breakpoint(md){
             font-size: 1.6rem;
@@ -117,6 +149,42 @@
             line-height: 150%;
             height:60px;
         }
+    }
+
+    &__edit-btn{
+        display: flex;
+        align-items: center;
+        gap:10px;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+
+        @include abstracts.breakpoint(sm){
+            margin-left: 20px;
+        }
+    }
+
+    &__checkbox{
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url("../icons/unchecked.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checked.svg");
+            }
+        }
+    }
+
+    &__form{
+        margin-bottom: 30px;
     }
 }
 
@@ -255,17 +323,6 @@
                 align-items: flex-start;
                 gap:10px;
             }
-        }
-
-        &-btn{
-            display: flex;
-            align-items: center;
-            gap:10px;
-
-            color:#9E9DA8;
-            font-size: 1.6rem;
-            font-weight: 500;
-            line-height: 150%
         }
     }
 }
