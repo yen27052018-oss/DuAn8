@@ -96,3 +96,124 @@
         color:#9E9DA8;
     }
 }
+
+.payment-card{
+    z-index: 0;
+    position: relative;
+    height: 100%;
+    max-width: 301px;
+    padding:20px;
+    border-radius: 10px;
+    background: var(--card-color);
+    transition: translate 0.3s;
+
+    @include abstracts.breakpoint(md){
+        margin: 0 auto;
+    }
+
+    &:hover{
+        translate: 0 -10px;
+    }
+
+    &__img{
+        z-index: -1;
+        position: absolute;
+        top:0;
+        right:0;
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        gap:6px;
+    }
+
+    &__type,
+    &__num,
+    &__label,
+    &__values{
+        color:#fff;
+    }
+
+    &__type{
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &__num{
+        margin-top: 37px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__bottom{
+        margin-top: 20px;
+        display: flex;
+    }
+
+    &__label{
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 175%;
+    }
+
+    &__values{
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__exp{
+        margin: 0 auto 0 40px;
+    }
+
+    &__circle{
+        --circle-width:28px;
+        position: relative;
+        width: 42px;
+        height:var(--circle-width);
+
+        &::before,
+        &::after{
+            position: absolute;
+            top:0;
+            content:"";
+            
+            width: var(--circle-width);
+            height: var(--circle-width);
+            border-radius: 99px;
+        }
+
+        &::before{
+            z-index: 1;
+            left: 0;
+            background: #f94545;
+            mix-blend-mode: hard-light;
+        }
+        &::after{
+            right:0;
+            background: #ffb700;
+        }
+    }
+}
+
+.new-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:14px;
+
+    padding:20px;
+    height: 100%;
+    max-width: 301px;
+    height: 170px;
+    border-radius: 10px;
+    border: 1px dashed #D2D1D6;
+
+    @include abstracts.breakpoint(md){
+        margin: 0 auto;
+    }
+}

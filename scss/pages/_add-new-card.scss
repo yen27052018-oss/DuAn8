@@ -1,0 +1,19 @@
+.form-card{
+    &__top{
+        display: flex;
+        align-items: center;
+        gap:10px;
+        margin-bottom: 30px;
+    }
+
+    &__label{
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    &__bottom{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

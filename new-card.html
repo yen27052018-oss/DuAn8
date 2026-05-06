@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Card | Grocerymart</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+
+    <!-- Styles -->
+     <link rel="stylesheet" href="./assets/css/main.css">
+
+     <!-- SCRIPTS -->
+    <script src="./assets/js/scripts.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./template/header-logined.html");
+    </script>
+
+    <div class="profile">
+        <div class="container">
+            <!-- Search bar -->
+             <div class="profile-container">
+                <div class="search-bar d-none d-md-flex">
+                    <input 
+                        type="text" 
+                        name="" 
+                        id=""
+                        placeholder="Search for item"
+                        class="search-bar__input">
+                    <button class="search-bar__submit">
+                        <img src="./assets/icons/search.svg" alt="" class="icon search-bar__icon">
+                    </button>
+                </div>
+             </div>
+            <!-- Profile content -->
+             <div class="profile-container">
+                <div class="row gy-2">
+                    <div class="col-3 col-lg-5 col-md-12">
+                        <aside class="profile-sidebar">
+                            <!-- User -->
+                            <div class="profile-user">
+                                <img src="./assets/img/avatars/avatar-3.png" alt="" class="profile-user__avt">
+                                <h1 class="profile-user__name">Imran Khan</h1>
+                                <p class="profile-user__desc">Registered: 17th May 2022</p>
+                            </div>
+
+                            <!-- Menu 1 -->
+                             <div class="profile-menu">
+                                <h3 class="profile-menu__title">Manage Account</h3>
+                                <ul class="profile-menu__list">
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/personal.svg" alt="" class="icon">
+                                            </span>
+                                            Personal info
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/address.svg" alt="" class="icon">
+                                            </span>
+                                            Addresses
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/communication.svg" alt="" class="icon">
+                                            </span>
+                                            Communications & privacy
+                                        </a>
+                                    </li>
+                                </ul>
+                             </div>
+                            <!-- Menu 2 -->
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__title">My items</h3>
+                                <ul class="profile-menu__list">
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/order.svg" alt="" class="icon">
+                                            </span>
+                                            Reorder
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/heart.svg" alt="" class="icon">
+                                            </span>
+                                            Lists
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/gift2.svg" alt="" class="icon">
+                                            </span>
+                                            Registries
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Menu 3 -->
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__title">My items</h3>
+                                <ul class="profile-menu__list">
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/protection.svg" alt="" class="icon">
+                                            </span>
+                                            Protection plans
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Menu 4 -->
+                            <div class="profile-menu">
+                                <h3 class="profile-menu__title">My items</h3>
+                                <ul class="profile-menu__list">
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/help.svg" alt="" class="icon">
+                                            </span>
+                                            Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="profile-menu__link">
+                                            <span class="profile-menu__icon">
+                                                <img src="./assets/icons/help2.svg" alt="" class="icon">
+                                            </span>
+                                            Terms of Use
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-9 col-lg-7 col-md-12">
+                        <div class="cart-info">
+                            <div class="row gy-3">
+                                <div class="col-12">
+                                    <a href="./profile.html">
+                                        <div class="form-card__top">
+                                            <img src="./assets/icons/arrow-left.svg" alt="" class="icon">
+                                            <h2 class="cart-info__heading cart-info__heading--lv2">Add credit or debit card</h2>
+                                        </div>
+                                    </a>
+                                    <form action="" class="form">
+                                        <div class="row row-cols-1 gy-md-1">
+                                            <!-- form row 1 -->
+                                            <div class="form__row">
+                                                <div class="row row-cols-2 row-cols-lg-1">
+                                                    <div class="form__group">
+                                                        <label for="first-name" class="form__label form__label--medium">First Name</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="first-name" 
+                                                                placeholder="First name"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label for="last-name" class="form__label form__label--medium">Last Name</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="last-name" 
+                                                                placeholder="Last name"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- form row 2 -->
+                                            <div class="form__row">
+                                                <div class="row row-cols-2 row-cols-lg-1">
+                                                    <div class="form__group">
+                                                        <label for="card-number" class="form__label form__label--medium">Card Information</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="card-number" 
+                                                                placeholder="Card Number"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label for="exp-date" class="form__label form__label--medium">Expiration Date</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="exp-date" 
+                                                                placeholder="MM/YY"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- form row 3 -->
+                                            <div class="form__row">
+                                                <div class="row row-cols-2 row-cols-lg-1">
+                                                    <div class="form__group">
+                                                        <label for="CVV" class="form__label form__label--medium">CVV</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="CVV" 
+                                                                placeholder="CVV"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label for="phone-number" class="form__label form__label--medium">Phone Number</label>
+                                                        <div class="form__text-input">
+                                                            <input 
+                                                                required
+                                                                type="text" 
+                                                                name="" 
+                                                                id="phone-number" 
+                                                                placeholder="Phone number"
+                                                                class="form__input">
+                                                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
+                                                        </div>
+                                                        <p class="form__error">Email chưa đúng định dạng</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form__group">
+                                            <label for="phone-number" class="form__label form-card__label">Card Preferences</label>
+                                            <label class="form__checkbox">
+                                                <input
+                                                    hidden
+                                                    type="checkbox" 
+                                                    name="" 
+                                                    id="set-default-cart" 
+                                                    class="form__checkbox-input">
+                                                <span class="form__checkbox-label">Set as default card</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-card__bottom">
+                                            <a href="./profile.html" class="btn btn--text">Cancel</a>
+                                            <a href="./profile.html" class="btn btn--primary btn--rounded">Save Card</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer"></footer>
+    <script>
+        load("#footer", "./template/footer.html");
+    </script>
+
+    <!-- Dialog / modal -->
+     <div id="dialog" class="dialog">
+        <div class="dialog__content">
+            <div class="dialog__text">Are you sure. You wanted to delete this product</div>
+            <div class="dialog__bottom">
+                <button class="btn btn--text dialog__btn js-toggle" toggle-target="#dialog">Cancel</button>
+                <button class="btn btn--primary dialog__btn js-toggle" toggle-target="#dialog">Confirm</button>
+            </div>
+        </div>
+        <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+     </div>
+</body>
+</html>
